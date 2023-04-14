@@ -296,15 +296,16 @@ Use addArtist to do the following:
 🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.') should return the artists array with the above object added to the end of the array. */
 
 function addArtist(arr, strName, strYears, strGenre, strNation, strBio) {
-  const newArtist = [...arr];
-  let selfObj = {
-    name: `${strName}`,
-    years: `${strYears}`,
-    genre: `${strGenre}`,
-    nationality: `${strNation}`,
-    bio: `${strBio}`
-  }
-  return newArtist.push(selfObj); 
+  let newArtist = [...arr];
+  let newObj = []
+  newArtist.push(newObj = {
+    name: strName,
+    years: strYears,
+    genre: strGenre,
+    nationality: strNation,
+    bio: strBio
+  });
+  return newArtist; 
 }
 
 
@@ -318,11 +319,12 @@ Use lotsOfArt to do the following:
 */
 
 function lotsOfArt(arr) {
-  for (let i = 0; i < arr.length; i++) {
+  //for (let i = 0; i < arr.length; i++) {
     if (arr[i].paintings > 100) {
-      return arr.push(arr[i].name);
+      arr[i] = arr[i].name;
     }
-  }
+  //}
+  return arr[i].name;
 }
 
 
