@@ -330,6 +330,7 @@ function lotsOfArt(arr) {
    if(arr.paintings > 100) {
     grabbedArtist = arr.name;
    }
+   grabbedArtist.splice(1, 1);
    return grabbedArtist;   
   //};
 }
@@ -366,10 +367,20 @@ Use artistByCountry to do the following:
 🌟 EXAMPLE: Invoking artistByCountry(artists, 'Spanish') will return: [ 'Salvador Dali', 'Pablo Picasso', 'Francisco Goya']
 */
 
-function artistByCountry(/*Your Code Here*/){
-  /*Your Code Here*/
+function artistByCountry(arr, strNation){
+  for(let i = 0; i < arr.length; i++) {
+    if (arr[i].nationality === strNation) {
+       arr[i] = arr[i].name;
+        arr = arr[i];
+      
+    } else {
+      return arr;
+    }
+    
+  }
+  
 }
-
+//aa
 
 
 /* ***** END OF TASKS ***** */
