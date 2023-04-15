@@ -319,12 +319,19 @@ Use lotsOfArt to do the following:
 */
 
 function lotsOfArt(arr) {
-  //for (let i = 0; i < arr.length; i++) {
+  /*for (let i = 0; i < arr.length; i++) {
     if (arr[i].paintings > 100) {
-      arr[i] = arr[i].name;
+       arr[i] = arr[i].name;
+       arr = [];
+       return arr;
     }
-  //}
-  return arr[i].name;
+    */
+   let grabbedArtist = [];
+   if(arr.paintings > 100) {
+    grabbedArtist = arr.name;
+   }
+   return grabbedArtist;   
+  //};
 }
 
 
@@ -340,7 +347,11 @@ Use artistInfo to do the following:
 */
 
 function artistInfo(arr, str){
-  /*Your Code Here*/
+  for (let i = 0; i < arr.length; i++) {
+    if (str === arr[i].name) {
+      return arr[i].bio;
+    }
+  }
 }
 
 
