@@ -327,15 +327,30 @@ function lotsOfArt(arr) {
     }
     */
    let grabbedArtist = [];
-   if(arr.paintings > 100) {
-    grabbedArtist = arr.name;
+   for(let i = 0; i < arr.length; i++) {
+   if(arr[i].paintings > 100) {
+   grabbedArtist.push(arr[i].name);
+   //console.log(grabbedArtist);
    }
-   grabbedArtist.splice(1, 1);
-   return grabbedArtist;   
-  //};
-}
-
-
+   //if(grabbedArtist != "Amedeo Modigliani" && "Rene Magritte" && "Salvador Dali" && "Vincent van Dough" && "Hieronymus Bosch" && "Kaszimir Malevich" && "Mikhail Vrubel" && "Pablo Picasso" && "Peter Paul Rubens" && "Pierre-Auguste Renoir" && "Francisco Goya" && "Frida Kahlo" && "Albrecht Dürer") {
+   // grabbedArtist.splice(0, 1);
+   //}
+  }
+   //console.log(grabbedArtist)
+   
+   return grabbedArtist;
+     
+  
+  }
+  //if (arr.paintings > 100) {
+  //  arr = arr.name;
+  //  console.log(arr);
+ // }
+  //return arr.push(arr.name);
+  
+//}
+console.log(lotsOfArt(artists));
+//console.log(lotsOfArt(artists.name));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 8: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use artistInfo to do the following: 
@@ -368,17 +383,15 @@ Use artistByCountry to do the following:
 */
 
 function artistByCountry(arr, strNation){
+  let grabbedArtist = [];
   for(let i = 0; i < arr.length; i++) {
     if (arr[i].nationality === strNation) {
-       arr[i] = arr[i].name;
-        arr = arr[i];
-      
-    } else {
-      return arr;
-    }
+      grabbedArtist.push(arr[i].name);
     
   }
   
+} 
+return grabbedArtist;
 }
 //aa
 
